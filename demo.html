@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日简报 - 重要新闻</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-placeholder {
+            @apply text-gray-500 italic;
+          }
+          .news-summary {
+            @apply text-sm text-gray-600 mt-1 ml-4; /* 摘要样式 */
+          }
+        }
+    </style>
+    <script>
+        // 移除了字体相关的配置，将使用 Tailwind 的默认字体栈
+        tailwind.config = {
+            theme: {
+                extend: {
+                    // fontFamily 不再需要特别指定 Inter
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 font-sans p-4 md:p-8"> <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+        <header class="bg-blue-600 text-white p-6">
+            <h1 class="text-2xl md:text-3xl font-bold text-center">每日简报</h1>
+            <p class="text-center text-blue-100 mt-2" id="briefing-date">[在此处插入日期]</p>
+        </header>
+
+        <main class="p-6">
+
+            <section>
+                <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">重要新闻 / 头条</h2>
+                <ul class="space-y-4" id="headlines">
+                    <li>
+                        <h3 class="font-medium text-gray-900 content-placeholder">[在此处插入第一条新闻标题]</h3>
+                        <p class="news-summary content-placeholder">[在此处插入第一条新闻的正文简述]</p>
+                    </li>
+                    <li>
+                        <h3 class="font-medium text-gray-900 content-placeholder">[在此处插入第二条新闻标题]</h3>
+                        <p class="news-summary content-placeholder">[在此处插入第二条新闻的正文简述]</p>
+                    </li>
+                    <li>
+                        <h3 class="font-medium text-gray-900 content-placeholder">[在此处插入第三条新闻标题]</h3>
+                        <p class="news-summary content-placeholder">[在此处插入第三条新闻的正文简述]</p>
+                    </li>
+                    </ul>
+            </section>
+
+        </main>
+
+        <footer class="bg-gray-200 text-gray-600 text-center p-4 text-sm">
+            <p>这是您的每日简报。</p>
+            <p>&copy; <span id="current-year">[自动填充年份]</span> Ultra Mechanical Protocol Lab</p>
+        </footer>
+    </div>
+
+    <script>
+        // 简单的脚本，用于自动填充当前年份
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // 示例：如何用 JavaScript 填充内容 (实际使用时，您需要用后端或手动替换占位符)
+        /*
+        document.getElementById('briefing-date').textContent = '2025年4月5日';
+        const headlinesList = document.getElementById('headlines');
+        headlinesList.innerHTML = `
+            <li>
+                <h3 class="font-medium text-gray-900">这是第一条新闻的实际标题</h3>
+                <p class="news-summary">这是第一条新闻的实际简述内容，可以稍微长一些。</p>
+            </li>
+            <li>
+                <h3 class="font-medium text-gray-900">这是第二条新闻的实际标题</h3>
+                <p class="news-summary">这是第二条新闻的实际简述内容。</p>
+            </li>
+        `;
+        */
+
+        // 移除占位符样式 (如果通过 JS 填充了内容)
+        /*
+        document.querySelectorAll('.content-placeholder').forEach(el => {
+            if (!el.textContent.startsWith('[')) { // 简单检查内容是否还是占位符
+                 el.classList.remove('content-placeholder');
+                 el.classList.remove('text-gray-500');
+                 el.classList.remove('italic');
+            }
+        });
+        */
+    </script>
+
+</body>
+</html>
