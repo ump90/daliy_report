@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日简报 - 重要新闻</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-placeholder {
+                @apply text-gray-500 italic;
+            }
+
+            .news-summary {
+                @apply text-sm text-gray-600 mt-1 ml-4;
+                /* 摘要样式 */
+            }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {}
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 font-sans p-4 md:p-8">
+<div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+    <header class="bg-blue-600 text-white p-6">
+        <h1 class="text-2xl md:text-3xl font-bold text-center">每日简报</h1>
+        <p class="text-center text-blue-100 mt-2" id="briefing-date"2025年04月05日</p>
+    </header>
+
+    <main class="p-6">
+        <section>
+            <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">重要新闻 / 头条</h2>
+            <ul class="space-y-4" id="headlines">
+                    <li>
+                        <h3 class="font-medium text-gray-900">DMIT推出CN2线路回程优化VPS服务器 支持IPv4/v6 支持更换IP地址</h3>
+                        <p class="news-summary">DMIT推出CN2线路回程优化VPS服务器，年付49.9美元，配置1核心+1GB内存+20GB SSD+2Gbps带宽+1000GB流量/月。三网回程走CN2线路，延迟约160毫秒。支持IPv4/IPv6，每15天可更换IP。流量双向计费，超量限速不停机。</p>
+                    </li>
+                    <li>
+                        <h3 class="font-medium text-gray-900">币安已按要求在欧盟下架USDT在内的多款加密稳定币 用户仍可存入/提出但不能交易</h3>
+                        <p class="news-summary">为遵守欧盟MiCA规定，币安下架USDT等多种不符合MiCA规定的加密稳定币及其相关交易对。用户仍可存入/提出这些稳定币，但不能交易。受影响的稳定币包括USDT、FDUSD、TUSD、USDP、AEUR、USTC、PAXG和DAI。</p>
+                    </li>
+                    <li>
+                        <h3 class="font-medium text-gray-900">微软提高所有本地服务器部署的产品许可证销售价格 涨价10%从7月份生效</h3>
+                        <p class="news-summary">微软宣布提高所有本地服务器部署的产品许可证销售价格，涨价10%，7月1日生效，主要影响SharePoint Server、Exchange Server和Skype for Business Server。核心CAL套件和企业CAL套件价格上调15%和20%。微软称涨价将支持产品维护和更新。</p>
+                    </li>
+                    <li>
+                        <h3 class="font-medium text-gray-900">Windows 11 24H2企业版现已支持热补丁更新 安装后无需重启即可生效</h3>
+                        <p class="news-summary">Windows 11 24H2企业版已支持热补丁更新，安装后无需重启，仅支持Microsoft Enterprise E3/E5/F3、Microsoft Education A3/A5或Microsoft Windows 365 Enterprise订阅用户。每年1、4、7、10月发布的补丁仍需重启。</p>
+                    </li>
+                    <li>
+                        <h3 class="font-medium text-gray-900">英伟达发布博客介绍任天堂NS2主机支持DLSS技术和实时光线追踪功能</h3>
+                        <p class="news-summary">英伟达确认任天堂NS2主机支持DLSS深度学习超级采样和实时光线追踪功能。NS2主机搭载定制的Nvidia GPU，配备RT核心和Tensor核心，电视模式支持4K游戏，手持模式支持1080P 120Hz刷新率。图形性能是NS1的10倍。</p>
+                    </li>
+                    <li>
+                        <h3 class="font-medium text-gray-900">Safari现已支持中英文混排添加空格 中日韩混排英文/数字时自动追加空格</h3>
+                        <p class="news-summary">Safari 18.4正式版通过WebKit内核支持text-autospace: normal属性，可在中英文混排中自动追加空格，支持简体中文、繁体中文、韩文和日文。其他浏览器尚未支持该属性。</p>
+                    </li>
+                    <li>
+                        <h3 class="font-medium text-gray-900">欧洲刑警组织摧毁全球规模最大的暗网恋童癖网站 查获9.1万个儿童虐待视频</h3>
+                        <p class="news-summary">欧洲刑警组织摧毁全球最大暗网恋童癖网站KidFlix，该网站注册会员高达180万名，儿童性虐视频9.1万个。执法机构已确定1400名犯罪嫌疑人，已逮捕79人。行动获得全球35个国家或地区的支持。</p>
+                    </li>
+                    <li>
+                        <h3 class="font-medium text-gray-900">免费域名US.KG使用政策继续更新 为打击滥用若要继续使用需缴纳2美元服务费</h3>
+                        <p class="news-summary">免费域名US.KG更新政策，用户需支付2美元一次性服务费购买KYC密钥，提交身份信息认证后才能注册域名。此举旨在降低域名滥用问题。原来的US.KG域名自动切换到DPDNS.ORG，如需继续使用US.KG需支付服务费。</p>
+                    </li>
+                    <li>
+                        <h3 class="font-medium text-gray-900">喜报！部分用户反馈Microsoft 365 E3 MSDN开发者订阅成功续订</h3>
+                        <p class="news-summary">部分用户反馈Microsoft 365 E3 MSDN开发者订阅成功续订，去年微软曾表示要删除E3 MSDN订阅。新开通Microsoft 365 E3/E5 MSDN开发者订阅难度大。</p>
+                    </li>
+                    <li>
+                        <h3 class="font-medium text-gray-900">速戳报名 ‼️ 最新AIGC峰会嘉宾在此，4月16日，来和大佬们一起AI</h3>
+                        <p class="news-summary">第三届中国AIGC产业峰会将于4月16日在北京举行，主题为「万物皆可AI」，邀请百度、华为、AWS等十数位AI领域创变者，共同探讨AI算力、AI Agent等热门话题。</p>
+                    </li>
+                    <li>
+                        <h3 class="font-medium text-gray-900">整整157页，比尔盖茨亲自公开微软起家的源代码：Altair Basic</h3>
+                        <p class="news-summary">比尔盖茨亲自公开微软起家的源代码Altair Basic，共157页。Altair Basic是微软的首款产品，奠定了微软的基础。</p>
+                    </li>
+                    <li>
+                        <h3 class="font-medium text-gray-900">DeepSeek前脚发新论文，奥特曼立马跟上：GPT-5就在几个月后啊</h3>
+                        <p class="news-summary">DeepSeek发布关于推理时Scaling Law的新论文，奥特曼随即表示GPT-5将在几个月后发布。DeepSeek新论文提出了SPCT方法，通过在线强化学习优化原则和批判生成，实现推理时扩展。</p>
+                    </li>
+                    <li>
+                        <h3 class="font-medium text-gray-900">实测车载DeepSeek：理财哄娃，做北京旅游攻略，避开喝豆汁儿那种</h3>
+                        <p class="news-summary">理想汽车接入DeepSeek后，为车机自研了一个推理模型，该模型能自主分析，针对用户的问题选择深度或短思考，提供包括编故事哄孩子、提供买房建议、制定旅游攻略等功能。</p>
+                    </li>
+                    <li>
+                        <h3 class="font-medium text-gray-900">中文海报设计，赛道一夜颠覆</h3>
+                        <p class="news-summary">豆包升级上新，文生图功能支持生成更准确的文字，尤其是在中文海报设计方面。标题大字准确度提升至94%，小字也能准确生成，可准确遵循超长复杂提示词，且免费。</p>
+                    </li>
+                    <li>
+                        <h3 class="font-medium text-gray-900">移动通信领域有了新SOTA：华为出品，精准预测用户行为</h3>
+                        <p class="news-summary">华为GTS部门AI算法团队提出GTS-LUM，用于移动通信用户行为建模，实现精准行为洞析与多跳预测。实验中效果大幅优于Meta的HSTU和字节的HLLM。</p>
+                    </li>
+                    <li>
+                        <h3 class="font-medium text-gray-900">GPT-4.5创造力比GPT-4o弱！浙大上海AI Lab发布新基准，寻找多模态创造力天花板</h3>
+                        <p class="news-summary">浙大联合上海人工智能实验室等团队发布Creation-MMBench，全球首个面向真实场景的多模态创造力评测基准。评测结果显示，GPT-4.5在创意写作方面表现弱于GPT-4o。</p>
+                    </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="bg-gray-200 text-gray-600 text-center p-4 text-sm">
+        <p>这是您的每日简报。</p>
+        <p>&copy; 2,025 Ultra Mechanical Protocol Lab</p>
+    </footer>
+</div>
+
+<script>
+    // 简单的脚本，用于自动填充当前年份
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
